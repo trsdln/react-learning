@@ -11,7 +11,7 @@ class Footer extends React.Component {
   render() {
     return (
       <footer>
-        <h5>Cat... WAT?</h5>
+        <h5>Footer - 2016</h5>
       </footer>
     );
   }

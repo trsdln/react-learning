@@ -21,6 +21,10 @@ class HomePage extends React.Component {
     return (
       <DocumentTitle title="Home">
         <section className="home-page">
+          <div>
+            <Link to="/search">Search</Link>
+            &nbsp;<Link to="/test">Test</Link>
+          </div>
 
           <div>
             Home
@@ -30,9 +34,6 @@ class HomePage extends React.Component {
 
           <RandomCatImage></RandomCatImage>
 
-          <div>
-            <Link to="/search">Search</Link>
-          </div>
 
         </section>
       </DocumentTitle>
