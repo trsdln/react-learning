@@ -62,6 +62,8 @@ class CommentsCollection extends React.Component {
 
 
 class CommentsWidget extends React.Component {
+  static ENTER_KEY_CODE = 13;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -77,6 +79,12 @@ class CommentsWidget extends React.Component {
 
   onCommentTextChange(event) {
     this.setState({text: event.target.value});
+  }
+
+  onCommentTextKeyUp(event) {
+    if (event.keyCode == CommentsWidget.ENTER_KEY_CODE) {
+      this.onSubmitComment(event);
+    }
   }
 
   onSubmitComment(event) {
@@ -111,7 +119,9 @@ class CommentsWidget extends React.Component {
             <textarea placeholder="Write you comment here..." cols="40" rows="4"
                       className="comment-textarea"
                       value={this.state.text}
-                      onChange={this.onCommentTextChange.bind(this)}>
+                      onChange={this.onCommentTextChange.bind(this)}
+                      onKeyUp={this.onCommentTextKeyUp.bind(this)}
+              >
             </textarea>
           </div>
           <button type="submit">Post</button>
