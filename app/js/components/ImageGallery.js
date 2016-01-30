@@ -1,5 +1,7 @@
 import React from 'react';
 
+import CommentsWidget from '../components/CommentsWidget'
+
 
 class RandomImage extends React.Component {
   constructor(props) {
@@ -9,6 +11,7 @@ class RandomImage extends React.Component {
   render() {
     return <div className="random-image">
       <img src={'http://lorempixel.com/400/200/' + this.props.category}/>
+      <CommentsWidget elementId={this.props.elementId}/>
     </div>
   }
 }
@@ -24,7 +27,8 @@ class ImageGallery extends React.Component {
     var nextKey = randomKey();
 
     this.images = this.props.categories.map((categoryName)=> {
-      return <RandomImage category={categoryName} key={nextKey++}/>
+      let elementId = nextKey++;
+      return <RandomImage category={categoryName} key={elementId} elementId={elementId}/>
     });
 
     return <div>{this.images}</div>;
