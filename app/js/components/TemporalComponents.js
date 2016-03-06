@@ -34,7 +34,7 @@ export default class Controller extends React.Component {
   render() {
     return (
       <div>
-        <Display enabled={this.state.enabled}/>
+        {this.state.enabled ? <Display enabled={this.state.enabled}/> : ''}
         <button onClick={this.onEnabledToggle.bind(this)}>toggle</button>
       </div>
     );
