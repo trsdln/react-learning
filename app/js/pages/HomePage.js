@@ -24,6 +24,7 @@ class HomePage extends React.Component {
           <div>
             <Link to="/search">Search</Link>
             &nbsp;<Link to="/test">Test</Link>
+            &nbsp;<Link to="/temp">Temp</Link>
           </div>
 
           <div>
@@ -33,8 +34,6 @@ class HomePage extends React.Component {
           <h4>My first component</h4>
 
           <RandomCatImage></RandomCatImage>
-
-
         </section>
       </DocumentTitle>
     );

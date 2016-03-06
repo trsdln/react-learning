@@ -4,10 +4,10 @@ import React         from 'react';
 import {Link}        from 'react-router';
 import DocumentTitle from 'react-document-title';
 
-import ImageGallery from '../components/ImageGallery'
+import Controller from '../components/TemporalComponents'
 
 
-class TestPage extends React.Component {
+class TempPage extends React.Component {
 
   constructor(props) {
     super(props);
@@ -22,13 +22,15 @@ class TestPage extends React.Component {
       <DocumentTitle title="Test">
         <section className="test-page">
           <Link to="/">Home</Link>
-          <Link to="/search">Search</Link>
-          <h4>Test page</h4>
-          <ImageGallery categories={this.categories}/>
+
+          <h4>Temp page</h4>
+
+          <Controller enabled={false}/>
         </section>
       </DocumentTitle>
     );
   }
 }
 
-export default TestPage;
+export default TempPage;
+

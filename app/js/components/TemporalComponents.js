@@ -17,7 +17,7 @@ class Display extends React.Component {
   }
 }
 
-export default class Controller extends React.Component {
+class Controller extends React.Component {
   static propTypes = {
     enabled: React.PropTypes.bool
   };
@@ -48,3 +48,4 @@ export default class Controller extends React.Component {
 }
 
 
+export default Controller;

@@ -9,6 +9,7 @@ import HomePage from './pages/HomePage';
 import SearchPage from './pages/SearchPage';
 import NotFoundPage from './pages/NotFoundPage';
 import TestPage from './pages/TestPage';
+import TempPage from './pages/TempPage';
 
 export default (
   <Router history={CreateBrowserHistory()}>
@@ -19,6 +20,7 @@ export default (
       <Route path="/" component={HomePage} />
       <Route path="/search" component={SearchPage} />
       <Route path="/test" component={TestPage} />
+      <Route path="/temp" component={TempPage} />
 
       <Route path="*" component={NotFoundPage} />
 

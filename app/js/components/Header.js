@@ -10,10 +10,8 @@ class Header extends React.Component {
 
   render() {
     return (
-      <header>
-
-        Header
-
+      <header className="mini-header">
+        React App For Learning
       </header>
     );
   }
